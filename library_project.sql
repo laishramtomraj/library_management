@@ -167,7 +167,8 @@ DELIMITER ;
 CALL member_history(1);
 
 -- C14. Create a trigger: when a row is inserted in a copy of the issues table, reduce copies_available by 1.
--- Make copies of the tables first
+
+-- Make the copies
 CREATE TABLE books_copy AS SELECT * FROM books;
 CREATE TABLE issues_copy AS SELECT * FROM issues;
 
